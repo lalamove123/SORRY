@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <title>For You, Baby 🌧️ | Please Forgive Me</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Gloock:ital@0;1&family=DM+Sans:wght@200;300;400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Ambient rain canvas -->
+  <canvas id="rain"></canvas>
+
+  <!-- Floating photo strip LEFT -->
+  <div class="photo-strip left">
+    <div class="photo-frame">
+      <img src="photo1.jpeg" alt="us"/>
+    </div>
+    <div class="photo-frame offset">
+      <img src="photo3.jpeg" alt="us"/>
+    </div>
+  </div>
+
+  <!-- Floating photo strip RIGHT -->
+  <div class="photo-strip right">
+    <div class="photo-frame">
+      <img src="photo2.jpeg" alt="us"/>
+    </div>
+    <div class="photo-frame offset">
+      <img src="photo4.jpeg" alt="us"/>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <main class="stage">
+
+    <!-- Top ornament -->
+    <div class="ornament" aria-hidden="true">
+      <span class="orn-line"></span>
+      <span class="orn-icon">✦</span>
+      <span class="orn-line"></span>
+    </div>
+
+    <!-- Headline -->
+    <h1 class="headline">
+      <span class="line1">I'm</span>
+      <span class="line2">Sorry.</span>
+    </h1>
+
+    <p class="sub-headline">more than words can hold</p>
+
+    <!-- Letter card -->
+    <article class="letter-card">
+      <div class="ruled-overlay"></div>
+      <div class="margin-rule"></div>
+
+      <!-- Wax seal -->
+      <div class="seal" aria-hidden="true">
+        <div class="seal-inner">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 8 C24 8 36 18 36 26 C36 32.627 30.627 38 24 38 C17.373 38 12 32.627 12 26 C12 18 24 8 24 8Z" fill="rgba(255,200,200,0.2)"/>
+            <path d="M24 12 L25.5 19 L32 18 L27 23 L32 30 L25.5 29 L24 36 L22.5 29 L16 30 L21 23 L16 18 L22.5 19 Z" fill="none" stroke="rgba(255,230,230,0.45)" stroke-width="0.7"/>
+          </svg>
+          <span class="seal-label">for anne</span>
+        </div>
+      </div>
+
+      <div class="letter-date" id="ldate"></div>
+
+      <p class="salutation">Hello baby,</p>
+
+      <div class="letter-body">
+        <p>
+          I know this is not enough pero gusto ko lang gawin ito para sa patuloy na efforts ko para sa iyo, para lang alam mo na <em>mahal na mahal kita</em> and andito lang ako palagi para sa iyo.
+        </p>
+        <p>
+          Every moment with you matters to me more than you know. The laughs, the silences, the little things I hold all of it close. And I am truly, deeply sorry for the pain I caused you. You deserved better from me, and I know that.
+        </p>
+        <p>
+          <em>I hope you find a reason to stay, baby.</em> Ayokong mawala ka. You are the most real thing in my life, and I would choose you <em>again and again</em> no matter how hard it gets.
+        </p>
+        <p>
+          This page is small and imperfect, just like me. But the love behind it is not.
+        </p>
+      </div>
+
+      <div class="letter-close">
+        <span>Forever your baby,</span>
+        <span class="sig">Your poor little baby ♡</span>
+      </div>
+
+      <p class="ps"><strong>P.S.</strong> — Hindi ako susuko, andito lang ako forever.</p>
+    </article>
+
+    <!-- Decision section - BUTTONS PERFECTLY ALIGNED -->
+    <section class="decision-section">
+      <p class="decision-prompt">so… will you forgive me?</p>
+      <div class="btn-row" id="btnRow">
+        <button class="btn-yes" id="btnYes">Yes, I forgive you 💛</button>
+        <button class="btn-no" id="btnNo">AYOKO</button>
+      </div>
+      <p class="dodge-hint" id="dodgeHint"></p>
+    </section>
+
+    <!-- Yes modal -->
+    <div class="yes-overlay" id="yesOverlay">
+      <div class="yes-card">
+        <div class="yes-hearts" id="yesHearts" aria-hidden="true"></div>
+        <p class="yes-title">Thank you, baby!!</p>
+        <p class="yes-msg">Mahal kita. Lagi. Forever.</p>
+        <button class="yes-close" onclick="closeYes()">close</button>
+      </div>
+    </div>
+
+    <!-- Persuasion Modal - appears when No button is clicked -->
+    <div class="persuasion-overlay" id="persuasionOverlay">
+      <div class="persuasion-card">
+        <div class="persuasion-close" id="persuasionClose">&times;</div>
+        <div class="persuasion-icon">💔</div>
+        <p class="persuasion-title" id="persuasionTitle">Wait, baby...</p>
+        <p class="persuasion-message" id="persuasionMessage">Are you sure? This breaks my heart a little more every time.</p>
+        <div class="persuasion-buttons">
+          <button class="persuasion-yes" id="persuasionYesBtn"> I'll Forgive You </button>
+          <button class="persuasion-no" id="persuasionNoBtn">AYOKO</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer">made with love, emotion, and effort</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
